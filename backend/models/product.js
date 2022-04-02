@@ -9,7 +9,6 @@ const ProductSchema = new Schema({
   information: {
     type: String,
     manLength: 5,
-    maxlength: 200,
   },
   price: {
     type: Number,
@@ -22,6 +21,11 @@ const ProductSchema = new Schema({
   },
   slug: {
     type: String,
+    required: true,
+  },
+  isFavorite: {
+    type: Boolean,
+    default: false,
     required: true,
   },
 });
